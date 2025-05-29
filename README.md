@@ -17,7 +17,7 @@ This Node.js function processes sensitive files stored in a Skyflow vault by:
     - `account_id` – your Skyflow account ID
     - `vault_id` – your Skyflow vault ID
     - `account_url` – base URL of your Skyflow domain
-4. **Dependencies** selected: 'axios@1.6.5' & 'form-data@2.4.0' or later.
+4. **Dependencies** selected: `axios@1.6.5` & `form-data@2.4.0` or later.
 5. **Function Deployment** triggered. [Skyflow Documentation](https://docs.skyflow.com/management/#FunctionService_CreateFunctionDeployment)
 
 ## 📥 Input Format
@@ -26,6 +26,7 @@ The function expects an event object with:
 - `Headers`: Must include `X-Skyflow-Authorization`.
 ### 🔧 Sample Input
 ```curl
+curl
 --location --request POST '{{gatewayURL}}/v1/gateway/inboundRoutes/y9251bce47df400fa19a7a4cccdb3951/redact' \
 --header 'X-SKYFLOW-ACCOUNT-ID: {{account_id}}' \
 --header 'X-Skyflow-Authorization: {{bearer_token}}' \
